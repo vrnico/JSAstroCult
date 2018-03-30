@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Chart } from './models/chart.model'
 
 @Component({
@@ -9,6 +9,7 @@ import { Chart } from './models/chart.model'
 export class AppComponent {
 
   selectedChart = null;
+  selectedAdd = null;
 
   masterChartList: Chart[] = [
     new Chart('Nico Daunt', '06-05-1991', '08:26:00', '33.6188829 |-117.9298493')
@@ -24,6 +25,10 @@ export class AppComponent {
 
   finishedEditing() {
   this.selectedChart = null;
+  }
+
+  ngOnInit(){
+    console.log(this.masterChartList[0])
   }
 
 }
