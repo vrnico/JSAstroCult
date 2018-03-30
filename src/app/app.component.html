@@ -1,6 +1,7 @@
 <div style='container'>
-  <h1>{{userName}}'s Dashboard</h1>
+  <h1>ASTROCULTS!</h1>
 <app-chart-generator (sendChart)="addChart($event)"></app-chart-generator>
+<app-chart-list [childChartList]="masterChartList" (clickedEdit)="editChart($event)"></app-chart-list>
   <!-- <form class='form-control'>
     <label>Name:</label>
     <input [(ngModel)]="userName" type="text" name="user" class='form-control'>
