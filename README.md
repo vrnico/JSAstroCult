@@ -15,7 +15,7 @@ Open your preferred terminal, and enter the following command to clone source to
 git clone https://github.com/vrnico/JSAstroCult.git
 ```
 
-navigate to the JSDocky directory:
+navigate to the JSAstroCult directory:
 ```sh
 cd JSAstroCult
 ```
