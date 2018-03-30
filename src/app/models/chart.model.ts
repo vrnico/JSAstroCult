@@ -1,3 +1,3 @@
 export class Chart {
-  constructor(public name: string, public birthdate: number) { }
+  constructor(public name: string, public birthDate: date, public birthTime: number, public birthLoc: number) { }
 }
