@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { Chart} from '../models/chart.model';
 
 @Component({
   selector: 'app-chart-generator',
   templateUrl: './chart-generator.component.html',
   styleUrls: ['./chart-generator.component.css']
 })
-export class ChartGeneratorComponent implements OnInit {
+export class ChartGeneratorComponent{
 
-  constructor() { }
+  export class NewChartComponent {
+    @Output() sendChart = new EventEmitter();
 
-  ngOnInit() {
+    submitForm(name: string, birthDate: string, birthTime: string, birthLoc: string) {
+      let newChart: Chart = new Chart(name, birthDate, parseInt(birthTime), parseInt(birthLoc));
+      this.sendChart.emit(newChart);
+    }
+
+    constructor() { }
+
+
   }
-
 }
