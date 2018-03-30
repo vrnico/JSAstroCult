@@ -1,8 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style='container'>
   <h1>{{userName}}'s Dashboard</h1>
 
-  <form>
-    <input [(ngModel)]="userName" type="text" name="user">
+  <form class='form-control'>
+    <label>Name:</label>
+    <input [(ngModel)]="userName" type="text" name="user" class='form-control'>
+    <br>
+    <label>Birthdate</label>
+    <input [(ngModel)]="birthDate" type="date" name="birthdate" class='form-control'>
+    <br>
+    <label>Birth Time</label>
+    <input [(ngModel)]="birthTime" type="time" name="birthtime" class='form-control'>
+    <br>
+    <label>Location of Birth</label>
+    <input [(ngModel)]="birthLoc" type="location" name="birthloc" class='form-control'>
+    <br>
+    <button type="submit" class='btn-lg btn-success form-control'>SUBMIT</button>
   </form>
 </div>

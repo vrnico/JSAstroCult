@@ -8,4 +8,5 @@ import { Chart } from './models/chart.model'
 })
 export class AppComponent {
 
+
 }
