@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { FormsModule }  from '@angular/forms';
 import { ChartGeneratorComponent } from './chart-generator/chart-generator.component';
 import { ChartListComponent } from './chart-list/chart-list.component';
+import { DateValueAccessorModule } from 'angular-date-value-accessor';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ChartListComponent } from './chart-list/chart-list.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    DateValueAccessorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

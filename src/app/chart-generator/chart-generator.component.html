@@ -3,13 +3,15 @@
   <input #newName>
   <br>
   <label>Birthdate</label>
-  <input #birthDate>
+  <input #birthDate type="date" useValueAsDate>
   <br>
   <label>Birth Time</label>
-  <input #birthTime>
+  <input #birthTime type="time">
   <br>
   <label>Location of Birth</label>
-  <input #birthLoc>
+  <input #birthLoc type="number">
   <br>
-  <button (click)="submitForm(newName.value, newBirthDate.value, newBirthTime.value, newBirthLoc.value); newName.value=''; newBirthDate.value=''; newBirthTime.value=''; newBirthLoc.value='';">Add</button>
+  <div>
+  <button (click)="submitForm(newName.value, newDate.value)">Add</button>
+</div>
 </form>

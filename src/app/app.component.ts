@@ -28,7 +28,7 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    console.log(this.masterChartList[0])
+    console.log(this.masterChartList[0]);
   }
 
 }
