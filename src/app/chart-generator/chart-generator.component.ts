@@ -10,9 +10,10 @@ export class ChartGeneratorComponent {
 
     @Output() sendChart = new EventEmitter();
 
-    submitForm(name: string, birthDate: string, birthTime: string, birthLoc: string) {
-      let newChart: Chart = new Chart(name, parseInt(birthDate), parseInt(birthTime), parseInt(birthLoc));
+    submitForm(name: string, birthDate: number, birthTime: string, birthLoc: string) {
+      let newChart: Chart = new Chart(name, birthDate, parseInt(birthTime), parseInt(birthLoc));
       this.sendChart.emit(newChart);
+      console.log(newChart.birthDate)
     }
 
     constructor() { }
