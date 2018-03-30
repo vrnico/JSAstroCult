@@ -6,14 +6,14 @@ import { Chart} from '../models/chart.model';
   templateUrl: './chart-generator.component.html',
   styleUrls: ['./chart-generator.component.css']
 })
-export class ChartGeneratorComponent{
+export class ChartGeneratorComponent {
 
-  export class NewChartComponent {
     @Output() sendChart = new EventEmitter();
 
     submitForm(name: string, birthDate: string, birthTime: string, birthLoc: string) {
       let newChart: Chart = new Chart(name, birthDate, parseInt(birthTime), parseInt(birthLoc));
       this.sendChart.emit(newChart);
+      console.log(this.name);
     }
 
     constructor() { }

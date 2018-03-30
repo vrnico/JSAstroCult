@@ -8,5 +8,16 @@ import { Chart } from './models/chart.model'
 })
 export class AppComponent {
 
+  selectedChart = null;
+
+  masterChartList: Chart[] = [
+
+
+    new Chart('Nico Daunt', '06-05-1991', '08:26:00', '33.6188829 |-117.9298493')
+  ];
+
+  addChart(newChart: Chart) {
+    this.masterChartList.push(newChart);
+  }
 
 }

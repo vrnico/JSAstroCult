@@ -1,3 +1,15 @@
-<p>
-  chart-generator works!
-</p>
+<form class='form-control'>
+  <label>Name:</label>
+  <input #newName>
+  <br>
+  <label>Birthdate</label>
+  <input #birthDate>
+  <br>
+  <label>Birth Time</label>
+  <input #birthTime>
+  <br>
+  <label>Location of Birth</label>
+  <input #birthLoc>
+  <br>
+  <button (click)="submitForm(newName.value, newBirthDate.value, newBirthTime.value, newBirthLoc.value); newName.value=''; newBirthDate.value=''; newBirthTime.value=''; newBirthLoc.value='';">Add</button>
+</form>
