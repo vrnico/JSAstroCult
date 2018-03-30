@@ -6,12 +6,12 @@
   <input #newDate type="date" useValueAsDate>
   <br>
   <label>Birth Time</label>
-  <input #birthTime type="time">
+  <input #newTime type="number">
   <br>
   <label>Location of Birth</label>
-  <input #birthLoc type="number">
+  <input #newLoc>
   <br>
   <div>
-  <button (click)="submitForm(newName.value, newDate.value)">Add</button>
+  <button (click)="submitForm(newName.value, newDate.value, newTime.value, newLoc.value )">Add</button>
 </div>
 </form>

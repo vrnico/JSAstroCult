@@ -12,7 +12,7 @@ export class AppComponent {
   selectedAdd = null;
 
   masterChartList: Chart[] = [
-    new Chart('Nico Daunt', '06-05-1991', '08:26:00', '33.6188829 |-117.9298493')
+    new Chart('Nico Daunt', '1991-06-05', '08:26:00', 'Newport Beach CA')
   ];
 
   addChart(newChart: Chart) {
