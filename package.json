@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "angular-date-value-accessor": "0.0.2",
+    "angular-google-maps-geocoder": "0.0.4",
     "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
     "ephemeris": "0.0.2-dev",
