@@ -31,4 +31,9 @@ export class ChartService {
                                 birthLoc: localUpdatedChart.birthLoc});
 
 }
+
+deleteChart(localChartToDelete){
+  var chartEntryInFirebase = this.getChartById(localChartToDelete.$key);
+  chartEntryInFirebase.remove();
+}
 }

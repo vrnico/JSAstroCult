@@ -20,4 +20,10 @@ export class EditChartComponent implements OnInit {
   this.chartService.updateChart(chartToUpdate);
 }
 
+beginDeletingChart(chartToDelete){
+  if(confirm("Are you sure you want to delete this chart from the Database? (this is an action that cannot be undone)")){
+    this.chartService.deleteChart(chartToDelete);
+  }
+}
+
 }
