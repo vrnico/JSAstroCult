@@ -11,4 +11,12 @@ export class ChartService {
     return CHARTS;
   }
 
+  getChartById(chartId: number){
+    for (var i = 0; i <= CHARTS.length - 1; i++){
+      if (CHARTS[i].id === chartId){
+        return CHARTS[i];
+      }
+    }
+  }
+
 }
