@@ -8,7 +8,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let chart of charts" (click)="goToDetailPage(chart)">
+    <tr *ngFor="let chart of charts | async" (click)="goToDetailPage(chart)">
       <td>{{chart.name}}</td>
       <td>{{chart.birthDate}}</td>
       <td>{{chart.birthTime}}</td>

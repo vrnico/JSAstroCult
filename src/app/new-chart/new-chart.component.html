@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+
+    <h3>Add New Chart Data</h3>
+  </div>
+  <div class="panel-body form-control">
+    <div>
+      <div>
+        <label>Name:</label>
+        <br>
+        <input #newName class='form-control'>
+      </div>
+      <br>
+      <div>
+        <label>Birthdate:</label>
+        <br>
+        <input #newBirthDate class='form-control' type="date">
+      </div>
+      <br>
+      <div>
+        <label>Birth Time:</label>
+        <br>
+        <input #newBirthTime class='form-control'>
+      </div>
+      <br>
+      <div>
+        <label>Birth Location:</label>
+        <br>
+        <input #newBirthLoc class='form-control'>
+      </div>
+      <br>
+      <button class="btn btn-lg btn-warning" (click)="submitForm(newName.value, newBirthDate.value, newBirthTime.value, newBirthLoc.value); newName.value=''; newBirthDate.value=''; newBirthTime.value=''; newBirthLoc.value=''">GENERATE NATAL CHART</button>
+    </div>
+  </div>
+</div>

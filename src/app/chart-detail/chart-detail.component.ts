@@ -10,6 +10,7 @@ import { ChartService } from '../chart.service';
   styleUrls: ['./chart-detail.component.css'],
   providers: [ChartService]
 })
+
 export class ChartDetailComponent implements OnInit {
   chartId: number;
   chartToDisplay: Chart;
@@ -25,5 +26,7 @@ export class ChartDetailComponent implements OnInit {
       this.chartId = parseInt(urlParameters['id']);
   });
   this.chartToDisplay = this.chartService.getChartById(this.chartId);
+
+}
 
 }
