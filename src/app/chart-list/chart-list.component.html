@@ -5,16 +5,14 @@
       <th scope="col">Date</th>
       <th scope="col">Time</th>
       <th scope="col">Location</th>
-      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let currentChart of childChartList">
-      <td>{{currentChart.name}}</td>
-      <td>{{currentChart.birthDate}}</td>
-      <td>{{currentChart.birthTime}}</td>
-      <td>{{currentChart.birthLoc}}</td>
-      <td><button (click)="editButtonClicked(currentChart)">Edit Chart</button></td>
+    <tr *ngFor="let chart of charts" (click)="goToDetailPage(chart)">
+      <td>{{chart.name}}</td>
+      <td>{{chart.birthDate}}</td>
+      <td>{{chart.birthTime}}</td>
+      <td>{{chart.birthLoc}}</td>
     </tr>
   </tbody>
 </table>

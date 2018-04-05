@@ -11,7 +11,7 @@ export class ChartGeneratorComponent {
     @Output() sendChart = new EventEmitter();
 
     submitForm(name: string, birthDate: string, birthTime: string, birthLoc: string) {
-      let newChart: Chart = new Chart(name, birthDate, birthTime, birthLoc);
+      let newChart: Chart = new Chart(name, birthDate, birthTime, birthLoc, id);
       this.sendChart.emit(newChart);
       console.log(newChart.birthTime)
     }

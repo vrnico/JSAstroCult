@@ -8,6 +8,7 @@ import { DateValueAccessorModule } from 'angular-date-value-accessor';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
+import { ChartDetailComponent } from './chart-detail/chart-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     ChartGeneratorComponent,
     ChartListComponent,
     WelcomeComponent,
-    AboutComponent
+    AboutComponent,
+    ChartDetailComponent
   ],
   imports: [
     BrowserModule,
