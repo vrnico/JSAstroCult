@@ -23,7 +23,7 @@ export class ChartListComponent implements OnInit {
   }
 
 goToDetailPage(clickedChart: Chart) {
-    //  this.router.navigate(['charts', clickedChart.id]);
+     this.router.navigate(['charts', clickedChart.$key]);
    };
 
 

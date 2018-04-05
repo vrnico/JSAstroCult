@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Chart} from '../models/chart.model';
 import { ChartService } from '../chart.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-chart-detail',
@@ -12,8 +13,8 @@ import { ChartService } from '../chart.service';
 })
 
 export class ChartDetailComponent implements OnInit {
-  chartId: number;
-  chartToDisplay: Chart;
+  chartId: string;
+  chartToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,7 +24,7 @@ export class ChartDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.chartId = parseInt(urlParameters['id']);
+      this.chartId = urlParameters['id'];
   });
   this.chartToDisplay = this.chartService.getChartById(this.chartId);
 

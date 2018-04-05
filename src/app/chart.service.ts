@@ -19,12 +19,8 @@ export class ChartService {
     this.charts.push(newChart);
   }
 
-  getChartById(chartId){
-    // for (var i = 0; i <= CHARTS.length - 1; i++){
-    //   if (CHARTS[i].id === chartId){
-    //     return CHARTS[i];
-    //   }
-    // }
+  getChartById(chartId: string){
+    return this.database.object('charts/' + chartId)
   }
 
 }
