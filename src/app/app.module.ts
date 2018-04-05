@@ -5,17 +5,23 @@ import { FormsModule }  from '@angular/forms';
 import { ChartGeneratorComponent } from './chart-generator/chart-generator.component';
 import { ChartListComponent } from './chart-list/chart-list.component';
 import { DateValueAccessorModule } from 'angular-date-value-accessor';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { routing } from './app.routing';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChartGeneratorComponent,
-    ChartListComponent
+    ChartListComponent,
+    WelcomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    DateValueAccessorModule
+    DateValueAccessorModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

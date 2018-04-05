@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Keg } from '../models/chart.model';
+import { Chart } from '../models/chart.model';
 
 @Component({
   selector: 'app-chart-list',
@@ -7,12 +7,7 @@ import { Keg } from '../models/chart.model';
   styleUrls: ['./chart-list.component.css']
 })
 export class ChartListComponent {
-  @Input() childChartList: Chart[];
-  @Output() clickedEdit = new EventEmitter();
-
-  editButtonClicked(chartToEdit: Chart) {
-   this.clickedEdit.emit(chartToEdit);
- }
+  charts: Chart[] = []
 
   constructor() { }
 
