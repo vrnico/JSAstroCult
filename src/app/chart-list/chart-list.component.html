@@ -2,17 +2,18 @@
   <thead>
     <tr>
       <th scope="col">Name</th>
-      <th scope="col">Date</th>
-      <th scope="col">Time</th>
-      <th scope="col">Location</th>
+      <th scope="col">Birthdate</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let chart of charts | async" (click)="goToDetailPage(chart)">
-      <td>{{chart.name}}</td>
+    <tr *ngFor="let chart of charts | async">
+      <td (click)="goToDetailPage(chart)">{{chart.name}}</td>
       <td>{{chart.birthDate}}</td>
-      <td>{{chart.birthTime}}</td>
-      <td>{{chart.birthLoc}}</td>
+      <div *ngIf="currentRoute === '/new-chart'">
+      <td>
+        <app-edit-chart [selectedChart]="chart"></app-edit-chart>
+      </td>
+      </div>
     </tr>
   </tbody>
 </table>

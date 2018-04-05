@@ -16,6 +16,8 @@ export class ChartListComponent implements OnInit {
 
   charts: FirebaseListObservable<any[]>;
 
+  currentRoute: string = this.router.url;
+
   constructor(private router: Router, private chartService: ChartService) { }
 
   ngOnInit(){

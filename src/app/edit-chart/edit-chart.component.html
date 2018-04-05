@@ -1,0 +1,12 @@
+<div class='form-control'>
+<label>New Name:</label>
+<input [(ngModel)] ="selectedChart.name" class='form-control'>
+<label>New Birthdate:</label>
+<input [(ngModel)] ="selectedChart.birthDate" class='form-control'>
+<label>New Birth Time:</label>
+<input [(ngModel)] ="selectedChart.birthTime" class='form-control'>
+<label>New Birth Location:</label>
+<input [(ngModel)] ="selectedChart.birthLoc" class='form-control'>
+<br>
+<button (click)="beginUpdatingChart(selectedChart)" class="btn-danger">Update Entry</button>
+</div>

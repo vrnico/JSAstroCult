@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Chart } from './models/chart.model';
-import { CHARTS } from './mock-charts';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
@@ -23,4 +22,13 @@ export class ChartService {
     return this.database.object('charts/' + chartId)
   }
 
+
+  updateChart(localUpdatedChart){
+    var chartEntryInFirebase = this.getChartById(localUpdatedChart.$key);
+    chartEntryInFirebase.update({name: localUpdatedChart.name,
+                                birthDate: localUpdatedChart.birthDate,
+                                birthTime: localUpdatedChart.birthTime,
+                                birthLoc: localUpdatedChart.birthLoc});
+
+}
 }

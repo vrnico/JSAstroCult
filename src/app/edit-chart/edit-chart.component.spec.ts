@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChartGeneratorComponent } from './chart-generator.component';
+import { EditChartComponent } from './edit-chart.component';
 
-describe('ChartGeneratorComponent', () => {
-  let component: ChartGeneratorComponent;
-  let fixture: ComponentFixture<ChartGeneratorComponent>;
+describe('EditChartComponent', () => {
+  let component: EditChartComponent;
+  let fixture: ComponentFixture<EditChartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChartGeneratorComponent ]
+      declarations: [ EditChartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChartGeneratorComponent);
+    fixture = TestBed.createComponent(EditChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
