@@ -30,9 +30,14 @@ export class ChartDetailComponent implements OnInit {
       this.chartId = urlParameters['id'];
 
   });
-  this.chartToDisplay = this.chartService.getChartById(this.chartId);
 
-console.log(this.chartToDisplay.name);
+  this.chartService.getChartById(this.chartId).subscribe(dataLastEmittedFromObserver => {
+  this.chartToDisplay = dataLastEmittedFromObserver;
+
+  console.log(this.chartToDisplay);
+
+  this.chartToDisplay = this.chartService.getChartById(this.chartId);
+console.log(this.chartToDisplay)
 }
 
 }

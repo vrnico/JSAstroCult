@@ -20,8 +20,8 @@ export class NatalChartComponent implements OnInit {
   constructor(public sun: number, private chartService: ChartService) { }
 
   ngOnInit() {
-    // let test = ephemeris.getAllPlanets("05.06.1991 17:09:01", 10.0014, 53.5653, 0);
-    // console.log(test);
+    let test = ephemeris.getAllPlanets("05.06.1991 17:09:01", 10.0014, 53.5653, 0);
+    console.log(test);
   }
 
 }
