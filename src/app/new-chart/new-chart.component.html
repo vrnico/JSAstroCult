@@ -12,9 +12,19 @@
       </div>
       <br>
       <div>
-        <label>Birthdate:</label>
+        <label>Month:</label>
         <br>
-        <input #newBirthDate class='form-control' type="date">
+        <input #newMonth class='form-control'>
+      </div>
+      <div>
+        <label>Day:</label>
+        <br>
+        <input #newDay class='form-control'>
+      </div>
+      <div>
+        <label>Year:</label>
+        <br>
+        <input #newBirthDate class='form-control'>
       </div>
       <br>
       <div>
@@ -29,7 +39,7 @@
         <input #newBirthLoc class='form-control'>
       </div>
       <br>
-      <button class="btn btn-lg btn-warning" (click)="submitForm(newName.value, newBirthDate.value, newBirthTime.value, newBirthLoc.value); newName.value=''; newBirthDate.value=''; newBirthTime.value=''; newBirthLoc.value=''">GENERATE NATAL CHART</button>
+      <button class="btn btn-lg btn-warning" (click)="submitForm(newName.value, newMonth.value, newDay.value, newBirthDate.value, newBirthTime.value, newBirthLoc.value); newName.value=''; newMonth.value; newDay.value; newBirthDate.value=''; newBirthTime.value=''; newBirthLoc.value=''">GENERATE NATAL CHART</button>
     </div>
   </div>
 </div>

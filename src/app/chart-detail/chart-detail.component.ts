@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Chart} from '../models/chart.model';
 import { ChartService } from '../chart.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
+var ephemeris = require('ephemeris-moshier');
 
 @Component({
   selector: 'app-chart-detail',
@@ -23,10 +24,15 @@ export class ChartDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+
     this.route.params.forEach((urlParameters) => {
       this.chartId = urlParameters['id'];
   });
   this.chartToDisplay = this.chartService.getChartById(this.chartId);
+
+  let test = ephemeris.getAllPlanets(this.chartToDisplay.birthDate, "17:09:01", 10.0014, 53.5653, 0);
+  console.log("RIGHT HERE   "+ test);
 
 }
 
