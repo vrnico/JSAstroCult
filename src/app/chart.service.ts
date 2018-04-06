@@ -28,7 +28,8 @@ export class ChartService {
     chartEntryInFirebase.update({name: localUpdatedChart.name,
                                 birthDate: localUpdatedChart.birthDate,
                                 birthTime: localUpdatedChart.birthTime,
-                                birthLoc: localUpdatedChart.birthLoc});
+                                birthLoc: localUpdatedChart.birthLoc,
+                                sunDeg: localUpdatedChart.sunDeg});
 
 }
 

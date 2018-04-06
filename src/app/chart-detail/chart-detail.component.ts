@@ -28,12 +28,11 @@ export class ChartDetailComponent implements OnInit {
 
     this.route.params.forEach((urlParameters) => {
       this.chartId = urlParameters['id'];
+
   });
   this.chartToDisplay = this.chartService.getChartById(this.chartId);
 
-  let test = ephemeris.getAllPlanets(this.chartToDisplay.birthDate, "17:09:01", 10.0014, 53.5653, 0);
-  console.log("RIGHT HERE   "+ test);
-
+console.log(this.chartToDisplay.name);
 }
 
 }

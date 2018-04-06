@@ -22,10 +22,12 @@ export class NewChartComponent implements OnInit {
 
   let birthDate = day+"."+month +"."+ year;
   //the whole project exists here rn figure out how to format Dates and ascribe planetary placements
+  let astroCalc = ephemeris.getAllPlanets(birthDate+" 17:09:01", 10.0014, 53.5653, 0);
 
-  var newChart: Chart = new Chart(name, birthDate, birthTime, birthLoc);
+  let sunDeg = astroCalc.observed.sun.apparentLongitudeDms360
+  var newChart: Chart = new Chart(name, birthDate, birthTime, birthLoc, sunDeg);
   this.chartService.addChart(newChart);
-  let test = ephemeris.getAllPlanets(birthDate+" 17:09:01", 10.0014, 53.5653, 0);
-  console.log(test);
+
+  console.log(newChart.sunDeg);
 }
 }
