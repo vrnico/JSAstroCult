@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NatalChartComponent } from './natal-chart.component';
+import { EditListComponent } from './edit-list.component';
 
-describe('NatalChartComponent', () => {
-  let component: NatalChartComponent;
-  let fixture: ComponentFixture<NatalChartComponent>;
+describe('EditListComponent', () => {
+  let component: EditListComponent;
+  let fixture: ComponentFixture<EditListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NatalChartComponent ]
+      declarations: [ EditListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NatalChartComponent);
+    fixture = TestBed.createComponent(EditListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

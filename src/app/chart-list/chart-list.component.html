@@ -9,7 +9,7 @@
     <tr *ngFor="let chart of charts | async">
       <td (click)="goToDetailPage(chart)">{{chart.name}}</td>
       <td>{{chart.birthDate}}</td>
-      <div *ngIf="currentRoute === '/new-chart'">
+      <div *ngIf="currentRoute === '/edit-list'">
       <td>
         <app-edit-chart [selectedChart]="chart"></app-edit-chart>
       </td>

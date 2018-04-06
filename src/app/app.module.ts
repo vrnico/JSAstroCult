@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { NewChartComponent } from './new-chart/new-chart.component';
 import { EditChartComponent } from './edit-chart/edit-chart.component';
+import { EditListComponent } from './edit-list/edit-list.component';
 // import { NatalChartComponent } from './natal-chart/natal-chart.component';
 
 export const firebaseConfig = {
@@ -31,6 +32,7 @@ export const firebaseConfig = {
     ChartDetailComponent,
     NewChartComponent,
     EditChartComponent,
+    EditListComponent,
     // NatalChartComponent
   ],
   imports: [

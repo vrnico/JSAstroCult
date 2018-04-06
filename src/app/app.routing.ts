@@ -6,6 +6,7 @@ import { ChartListComponent } from './chart-list/chart-list.component';
 import { ChartDetailComponent } from './chart-detail/chart-detail.component';
 import { NewChartComponent } from './new-chart/new-chart.component';
 import { EditChartComponent } from './edit-chart/edit-chart.component';
+import { EditListComponent } from './edit-list/edit-list.component';
 
 const appRoutes: Routes = [
     {
@@ -31,6 +32,10 @@ const appRoutes: Routes = [
   {
     path: 'edit-chart',
     component: EditChartComponent
+  },
+  {
+    path: 'edit-list',
+    component: EditListComponent
   }
  ];
 
