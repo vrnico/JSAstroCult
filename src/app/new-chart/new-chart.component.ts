@@ -16,8 +16,6 @@ export class NewChartComponent implements OnInit {
 
   ngOnInit() {
 
-    let test = ephemeris.getAllPlanets("0{{birthDate}}.06.1991 17:09:01", 10.0014, 53.5653, 0);
-    console.log(test);
   }
 
   submitForm(name: string, month: string, day: string, year: string, birthTime: number, birthLoc: string) {
