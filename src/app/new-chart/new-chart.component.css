@@ -1,0 +1,16 @@
+.birthdate {
+  padding-left: 2em;
+}
+
+.badge-info {
+  padding: .4em;
+  border-radius: .2em;
+  font-weight: bold;
+  font-size: .8em;
+  text-shadow: 1px 1px black;
+  background-color: #ecdb54;
+}
+
+.birthtime {
+  padding-left: 2em;
+}

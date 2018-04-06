@@ -38,6 +38,6 @@ export class ChartDetailComponent implements OnInit {
 
   this.chartToDisplay = this.chartService.getChartById(this.chartId);
 console.log(this.chartToDisplay)
-}
-
+    }
+  }
 }

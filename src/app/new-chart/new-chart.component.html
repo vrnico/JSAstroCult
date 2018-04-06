@@ -11,26 +11,40 @@
         <input #newName class='form-control'>
       </div>
       <br>
+      <label>Birthdate:</label>
+      <div class="row birthdate">
       <div>
-        <label>Month:</label>
+        <label class='badge-info'>Month:</label>
         <br>
-        <input #newMonth class='form-control'>
+        <input #newMonth class='form-control' type='number'>
       </div>
       <div>
-        <label>Day:</label>
+        <label class='badge-info'>Day:</label>
         <br>
-        <input #newDay class='form-control'>
+        <input #newDay class='form-control' type='number'>
       </div>
       <div>
-        <label>Year:</label>
+        <label class='badge-info'>Year:</label>
         <br>
-        <input #newBirthDate class='form-control'>
+        <input #newBirthDate class='form-control' type='number'>
       </div>
+    </div>
       <br>
       <div>
         <label>Birth Time:</label>
+        <label class='secondary-text'>astrocult uses military time (for now)</label>
         <br>
-        <input #newBirthTime class='form-control'>
+        <div class="row birthtime">
+          <div>
+            <label class='badge-info'>Hour:</label>
+        <input #newHour class='form-control' type='number'>
+      </div>
+      <div>
+        <label class='badge-info'>Minute:</label>
+        <input #newMinute class='form-control' type='number'>
+      </div>
+        </div>
+
       </div>
       <br>
       <div>
@@ -39,7 +53,7 @@
         <input #newBirthLoc class='form-control'>
       </div>
       <br>
-      <button class="btn btn-lg btn-warning" (click)="submitForm(newName.value, newMonth.value, newDay.value, newBirthDate.value, newBirthTime.value, newBirthLoc.value); newName.value=''; newMonth.value; newDay.value; newBirthDate.value=''; newBirthTime.value=''; newBirthLoc.value=''">GENERATE NATAL CHART</button>
+      <button class="btn btn-lg btn-warning" (click)="submitForm(newName.value, newMonth.value, newDay.value, newBirthDate.value, newHour.value, newMinute.value, newBirthLoc.value); newName.value=''; newMonth.value=''; newDay.value=''; newBirthDate.value=''; newHour.value=''; newMinute.value=''; newBirthLoc.value='';" routerLink='/chart-list'>GENERATE NATAL CHART</button>
     </div>
   </div>
 </div>

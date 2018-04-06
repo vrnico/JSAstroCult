@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Chart } from '../models/chart.model';
+import { Router } from '@angular/router';
+import { FirebaseListObservable } from 'angularfire2/database';
+
 import { ChartService } from '../chart.service';
 var ephemeris = require('ephemeris-moshier');
 
@@ -12,17 +15,25 @@ var ephemeris = require('ephemeris-moshier');
 })
 export class NewChartComponent implements OnInit {
 
-  constructor(private chartService: ChartService) { }
+  charts: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
+
+  constructor(private router: Router, private chartService: ChartService) { }
 
   ngOnInit() {
-
+  this.charts = this.chartService.getCharts();
   }
 
-  submitForm(name: string, month: string, day: string, year: string, birthTime: number, birthLoc: string) {
+
+
+
+  submitForm(name: string, month: string, day: string, year: string, hour: string, minute: string, birthLoc: string) {
 
   let birthDate = day+"."+month +"."+ year;
+
+  let birthTime = hour+":"+minute+":00"
   //the whole project exists here rn figure out how to format Dates and ascribe planetary placements
-  let astroCalc = ephemeris.getAllPlanets(birthDate+" 17:09:01", 10.0014, 53.5653, 0);
+  let astroCalc = ephemeris.getAllPlanets(birthDate+" "+birthTime, 10.0014, 53.5653, 0);
 
   let sunDeg = astroCalc.observed.sun.apparentLongitudeDms30;
   let rawSunDeg = astroCalc.observed.sun.apparentLongitudeDms360;
