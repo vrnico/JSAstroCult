@@ -32,7 +32,24 @@ export class ChartService {
                                 sunDeg: localUpdatedChart.sunDeg,
                                 sunSignFormat: localUpdatedChart.sunSignFormat,
                                 moonDeg: localUpdatedChart.moonDeg,
-                                moonSignFormat: localUpdatedChart.moonSignFormat});
+                                moonSignFormat: localUpdatedChart.moonSignFormat,
+                                mercDeg: localUpdatedChart.mercDeg,
+                                mercSignFormat: localUpdatedChart.mercSignFormat,
+                                venusDeg: localUpdatedChart.venusDeg,
+                                venusSignFormat: localUpdatedChart.venusSignFormat,
+                                marsDeg: localUpdatedChart.marsDeg,
+                                marsSignFormat: localUpdatedChart.marsSignFormat,
+                                jupiterDeg: localUpdatedChart.jupiterDeg,
+                                jupiterSignFormat: localUpdatedChart.jupiterSignFormat,
+                                saturnDeg: localUpdatedChart.saturnDeg,
+                                saturnSignFormat: localUpdatedChart.saturnSignFormat,
+                                uranusDeg: localUpdatedChart.uranusDeg,
+                                uranusSignFormat: localUpdatedChart.uranusSignFormat,
+                                neptuneDeg: localUpdatedChart.neptuneDeg,
+                                neptuneSignFormat: localUpdatedChart.neptuneSignFormat,
+                                plutoDeg: localUpdatedChart.plutoDeg,
+                                plutoSignFormat: localUpdatedChart.plutoSignFormat,
+                              });
 
 }
 
