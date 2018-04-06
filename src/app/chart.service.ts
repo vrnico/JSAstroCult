@@ -30,7 +30,9 @@ export class ChartService {
                                 birthTime: localUpdatedChart.birthTime,
                                 birthLoc: localUpdatedChart.birthLoc,
                                 sunDeg: localUpdatedChart.sunDeg,
-                                sunSignFormat: localUpdatedChart.sunSignFormat});
+                                sunSignFormat: localUpdatedChart.sunSignFormat,
+                                moonDeg: localUpdatedChart.moonDeg,
+                                moonSignFormat: localUpdatedChart.moonSignFormat});
 
 }
 

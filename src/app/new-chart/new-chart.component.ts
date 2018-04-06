@@ -26,7 +26,13 @@ export class NewChartComponent implements OnInit {
 
   let sunDeg = astroCalc.observed.sun.apparentLongitudeDms30;
   let rawSunDeg = astroCalc.observed.sun.apparentLongitudeDms360;
+
+  let moonDeg =
+  astroCalc.observed.moon.apparentLongitudeDms30;
+  let rawMoonDeg = astroCalc.observed.moon.apparentLongitudeDms360;
+
   let degString = astroCalc.observed.sun.apparentLongitudeDd;
+  let moonDegString = astroCalc.observed.moon.apparentLongitudeDd;
 
   let zodSign = [];
     if(degString >= 0 && degString <= 30){
@@ -55,12 +61,41 @@ export class NewChartComponent implements OnInit {
       zodSign.push('Pisces');
     }
 
+  let moonZodSign = [];
+    if(moonDegString >= 0 && moonDegString <= 30){
+      moonZodSign.push('Aries');
+    } else if(moonDegString >= 30 && moonDegString <= 60){
+      moonZodSign.push('Taurus');
+    } else if(moonDegString >= 60 && moonDegString <= 90){
+      moonZodSign.push('Gemini');
+    } else if(moonDegString >= 90 && moonDegString <= 120){
+      moonZodSign.push('Cancer');
+    } else if(moonDegString >= 120 && moonDegString <= 150){
+      moonZodSign.push('Leo');
+    } else if(moonDegString >= 150 && moonDegString <= 180){
+      moonZodSign.push('Virgo');
+    } else if(moonDegString >= 180 && moonDegString <= 210){
+      moonZodSign.push('Libra');
+    } else if(moonDegString >= 210 && moonDegString <= 240){
+      moonZodSign.push('Scorpio');
+    } else if(moonDegString >= 240 && moonDegString <= 270){
+      moonZodSign.push('Sagittarius');
+    } else if(moonDegString >= 270 && moonDegString <= 300){
+      moonZodSign.push('Capricorn');
+    } else if(moonDegString >= 300 && moonDegString <= 330){
+      moonZodSign.push('Aquarius');
+    } else if(moonDegString >= 330 && moonDegString <= 360){
+      moonZodSign.push('Pisces');
+    }
+
     let sunSignFormat = sunDeg + " " + zodSign;
+    let moonSignFormat = moonDeg + " " + moonZodSign
+    let mercSignFormat = mercDeg + " " + mercZodSign;
 
 
-  var newChart: Chart = new Chart(name, birthDate, birthTime, birthLoc, sunDeg, sunSignFormat);
+  var newChart: Chart = new Chart(name, birthDate, birthTime, birthLoc, sunDeg, sunSignFormat, moonDeg, moonSignFormat);
+
   this.chartService.addChart(newChart);
 
-  console.log(newChart.sunSignFormat);
 }
 }

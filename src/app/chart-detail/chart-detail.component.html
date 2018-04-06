@@ -1,8 +1,9 @@
-<div>
-  <h3>{{(chartToDisplay?.name}}</h3>
-  <h4>{{(chartToDisplay?.birthDate}} | {{(chartToDisplay?.birthTime}}</h4>
-  <h5>{{(chartToDisplay?.birthLoc}}</h5>
-  <h5>{{(chartToDisplay?.sunSignFormat}}</h5>
+<div class="jumbotron">
+  <h3>{{(chartToDisplay | async)?.name}}</h3>
+  <h4>{{(chartToDisplay | async)?.birthDate}} | {{(chartToDisplay | async)?.birthTime}}</h4>
+  <h5>{{(chartToDisplay | async)?.birthLoc}}</h5>
+  <h5>Sun in {{(chartToDisplay | async)?.sunSignFormat}}</h5>
+  <h5>Moon in {{(chartToDisplay | async)?.moonSignFormat}}</h5>
 </div>
 
 <br>
