@@ -184,11 +184,10 @@ Congratulations you are now the proud owner of a clean new astrology database! Y
 * Npmjs user and fellow astrologer [Xerix](https://www.npmjs.com/~xerik)
 * The astro/code wizards with [Moshier](http://www.moshier.net/)
 
-###I couldn't of done this without you guys!
-##CONTACT
+## Contact
 questions/comments/concerns
-[nico.daunt@gmail.com](mailto:nico.daunt@gmail.com)
-[PERSONAL WEBSITE](nicodaunt.com)
+* [nico.daunt@gmail.com](mailto:nico.daunt@gmail.com)
+* [PERSONAL WEBSITE](nicodaunt.com)
 
 
 
