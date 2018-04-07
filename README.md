@@ -155,7 +155,16 @@ Congratulations you are now the proud owner of a clean new astrology database! Y
 
 
 
+##features
 
+1. Add your natal chart
+2. Update existing natal charts dynamically to the database
+3. Delete natal charts
+
+### feature to come
+1. chart comparison
+2. organize people by planetary placements
+3. astrological subcommunities? forums?
 
 
 
@@ -182,7 +191,6 @@ Congratulations you are now the proud owner of a clean new astrology database! Y
 [nico.daunt@gmail.com](mailto:nico.daunt@gmail.com)
 [PERSONAL WEBSITE](nicodaunt.com)
 
-```
 
 
 
