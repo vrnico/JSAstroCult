@@ -33,7 +33,10 @@ cd app
 touch api-keys.ts
 ```
 
-Retrieve your api keys located @ https://console.firebase.google.com/project/[YOUR PROJECT HERE]/overview:
+Retrieve your api keys located @
+```
+https://console.firebase.google.com/project/[YOUR PROJECT HERE]/overview
+```
 
 ```sh
 apiKey: "",
