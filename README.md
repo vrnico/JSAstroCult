@@ -6,10 +6,12 @@ AstroCult
 
 #### Description
 AstroCult is an online astrological interpreter for use by anyone with a birthday. The goal of AstroCult is to make accesible an interface to interperet one's natal chart, and to provide an open-source astrological community of for Web 3.0.
-
+```
 [VISIT THE LIVE DEMO](https://astrocult-480a2.firebaseapp.com/)
-[ADD YOUR CHART TO OUR RUNNING DATABASE](https://astrocult-480a2.firebaseapp.com/new-chart)
 
+```
+[ADD YOUR CHART TO OUR RUNNING DATABASE](https://astrocult-480a2.firebaseapp.com/new-chart)
+```
 
 ## Installation (build your own database!)
 
