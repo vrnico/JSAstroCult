@@ -12,9 +12,8 @@ AstroCult is an online astrological interpreter for use by anyone with a birthda
 
 ## Installation (build your own database!)
 
-First and foremost set up a firebase project
-```sh
-```
+First and foremost set up a firebase project @ https://firebase.google.com/
+
 
 Open your preferred terminal, and enter the following command to clone source to your local machine:
 ```sh
