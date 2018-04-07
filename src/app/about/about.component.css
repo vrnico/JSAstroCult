@@ -1,0 +1,18 @@
+.btc {
+  width: 20%;
+  height: auto;
+}
+
+#textElement:hover {
+ color: grey;
+}
+
+.links {
+  color: grey;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: #007bff;
+  font-weight: 440;
+}

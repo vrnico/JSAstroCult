@@ -5,6 +5,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 
 import { ChartService } from '../chart.service';
 var ephemeris = require('ephemeris-moshier');
+declare var require: any;
 
 
 @Component({
@@ -33,8 +34,8 @@ export class NewChartComponent implements OnInit {
 
   let birthTime = hour+":"+minute+":00"
   //the whole project exists here rn figure out how to format Dates and ascribe planetary placements
-  let astroCalc = ephemeris.getAllPlanets(birthDate+" "+birthTime, 10.0014, 53.5653, 0);
-
+  let astroCalc = ephemeris.getAllPlanets(birthDate+" 16:26:00 ", 100.0014, 53.5653, 0);
+console.log(astroCalc);
   let sunDeg = astroCalc.observed.sun.apparentLongitudeDms30;
   let rawSunDeg = astroCalc.observed.sun.apparentLongitudeDms360;
 
@@ -62,6 +63,8 @@ export class NewChartComponent implements OnInit {
   let uranusDegString = astroCalc.observed.uranus.apparentLongitudeDd;
   let neptuneDegString = astroCalc.observed.neptune.apparentLongitudeDd;
   let plutoDegString = astroCalc.observed.pluto.apparentLongitudeDd;
+
+
 
   let zodSign = [];
     if(degString >= 0 && degString <= 30){

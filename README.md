@@ -5,10 +5,17 @@ AstroCult
 ### Epicodus Week Three Javascript Code Review on Typescript and Angular.
 
 #### Description
+AstroCult is an online astrological interpreter for use by anyone with a birthday. The goal of AstroCult is to make accesible an interface to interperet one's natal chart, and to provide an open-source astrological community of for Web 3.0.
+
+[VISIT THE LIVE DEMO](https://astrocult-480a2.firebaseapp.com/)
+[ADD YOUR CHART TO OUR RUNNING DATABASE](https://astrocult-480a2.firebaseapp.com/new-chart)
 
 
+## Installation (build your own database!)
 
-## Installation
+First and foremost set up a firebase project
+```sh
+```
 
 Open your preferred terminal, and enter the following command to clone source to your local machine:
 ```sh
@@ -20,30 +27,103 @@ navigate to the JSAstroCult directory:
 cd JSAstroCult
 ```
 
-Initialize the configuraton process:
+create a place to store your api-keys:
 ```sh
-npm install
+cd src
+cd app
+touch api-keys.ts
 ```
 
-Initialize angular:
+Retrieve your api keys located @ https://console.firebase.google.com/project/[YOUR PROJECT HERE]/overview:
+
+```sh
+apiKey: "",
+authDomain: "",
+databaseURL: "",
+projectId: "",
+storageBucket: "",
+messagingSenderId: ""
+```
+
+Store and export firebase api-keys in api-keys.ts file with the following codeblock (syntax is important here y'all):
+```sh
+export var masterFirebaseConfig = {
+    apiKey: "FAKESTRING-99999-999_FaKeeSTring",
+    authDomain: "astrocult-420b3.firebaseapp.com",
+    databaseURL: "https://astrocult-420b3.firebaseio.com",
+    storageBucket: "astrocult-420b3.appspot.com",
+    messagingSenderId: "10101010101"
+  };
+```
+
+
+Install angular globally (if you haven't already):
 ```sh
 npm install -g @angular/cli@1.6.5
 ```
 
-Build the javascript project and import dependencies:
+
+Build out the angular project and import dependencies:
 ```sh
-npm run build
+ng serve --open
 ```
 
-Launch the site from the project directory:
+## Further Installation (deploy your own database!)
+
+Update node_modules and confirm project isn't throwing errors
 ```sh
-npm run start
+npm install
+```
+If build is clean set the production version in the root directory
+```sh
+ng build --env=prod
+```
+Install the firebase-tools globally if you haven't already
+```sh
+npm install -g firebase-tools
+```
+Run the login command
+```sh
+firebase login
+```
+Initialize the firebase project
+```sh
+firebase init
 ```
 
-If you are building this program using Windows add the line below into your package.json under start
+Select database and hosting when prompted
 ```sh
-"start": "webpack --mode development && webpack-dev-server --open --mode development",
+? What Firebase CLI features do you want to setup for this folder?
+
+[X] Database: Deploy Firebase Realtime Database Rules
+[X] Hosting: Configure and deploy Firebase Hosting sites
 ```
+
+When prompted set firebase default root from public to /dist
+```sh
+?(public) dist
+```
+set database.rule.json to true in project file
+```js
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
+deploy to firebase in command line
+```sh
+firebase deploy
+```
+open in browser from command line or firebase.com
+```sh
+firebase open
+>Hosting: Deployed site
+```
+
+Congratulations you are now the proud owner of a clean new astrology database! You're one heck of a coder!
+
 
 ## Specifications
 
@@ -72,11 +152,7 @@ If you are building this program using Windows add the line below into your pack
 | ------------- |:-------------:|
 | 06/05/1991 08:26 Newport Beach, CA      | **Bob Ross also has Mercury in Pisces, You now have access to Mars in Leo chat** |
 
-5. #### Generates stats based off of placements within the community
 
-| Input      | Output           |
-| ------------- |:-------------:|
-| 06/05/1991 08:26 Newport Beach, CA      | **You and 40% of your friends have Water Sign Moons** |
 
 
 
@@ -91,111 +167,19 @@ If you are building this program using Windows add the line below into your pack
 * CSS
 * Angular
 * Typescript
-###  Tested With
-* Karma
-* Jasmine
+* Firebase
+* Swiss ephemeris
 
+## Special thanks to
+* GitHub user and fellow astrologer [Mivion](https://github.com/mivion)
+* Npmjs user and fellow astrologer [Xerix](https://www.npmjs.com/~xerik)
+* The astro/code wizards with [Moshier](http://www.moshier.net/)
 
-TO TEST ASTRODATA RUN THIS SCRIPT IN INDEX
-```js
-<script type='text/javascript' src='index.js' charset='utf-8'></script>
-<script type='text/javascript' src='common.js' charset='utf-8'></script>
-<script type='text/javascript' src='load.js' charset='utf-8'></script>
+###I couldn't of done this without you guys!
 
-<script type='text/javascript' src='astronomy/index.js' charset='utf-8'></script>
-
-<script type='text/javascript' src='astronomy/moshier/index.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/constant.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/julian.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/delta.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/epsilon.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/lonlat.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/gplan.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/precess.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/util.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/kepler.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/body.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/sun.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/aberration.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/altaz.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/constellation.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/deflection.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/diurnal.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/fk4fk5.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/light.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/moon.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/nutation.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/planet.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/refraction.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/siderial.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/star.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/transit.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/vearth.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/processor.js' charset='utf-8'></script>
-
-<script type='text/javascript' src='astronomy/moshier/plan404/index.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/mercury.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/venus.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/earth.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/moonlr.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/moonlat.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/mars.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/jupiter.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/saturn.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/uranus.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/neptune.js' charset='utf-8'></script>
-<script type='text/javascript' src='astronomy/moshier/plan404/pluto.js' charset='utf-8'></script>
-
-<script type='text/javascript' src='shortcut.js' charset='utf-8'></script>
-
-<script type='text/javascript' src='ephemeris-0.1.0.js' charset='utf-8'></script>
-<script type='text/javascript'>
-
-var date = {year: 1991, month: 06, day: 05, hours: 08, minutes: 26, seconds: 0};
-
-$const.tlong = 17.9298; // longitude
-$const.glat = 33.6189; // latitude
-
-$processor.init ();
-
-// sun, mercury, venus, moon, mars, jupiter, saturn, uranus, neptune, pluto, chiron, sirius
-var body = $moshier.body.sun;
-var testMoon = $moshier.body.moon;
-var testMerc = $moshier.body.mercury;
-var testVenus = $moshier.body.venus;
-var testMars = $moshier.body.mars;
-var testJupiter = $moshier.body.jupiter;
-var testSaturn = $moshier.body.saturn;
-var testUranus = $moshier.body.uranus;
-var testNeptune = $moshier.body.neptune;
-var testPluto = $moshier.body.pluto;
-
-
-$processor.calc (date, body);
-$processor.calc (date, testMoon);
-$processor.calc (date, testMerc);
-$processor.calc (date, testVenus);
-$processor.calc (date, testMars);
-$processor.calc (date, testJupiter);
-$processor.calc (date, testSaturn);
-$processor.calc (date, testUranus);
-$processor.calc (date, testNeptune);
-$processor.calc (date, testPluto);
-
-
-console.log(body.position);
-console.log(date.universalDateString);
-console.log("Sun: " + body.position.equinoxEclipticLonLat[3].degree);
-console.log("Moon: " + testMoon.position.apparentLongitude);
-console.log("Mercury: " + testMerc.position.apparentLongitude);
-console.log("Venus: " + testVenus.position.apparentLongitude);
-console.log("Mars: " + testMars.position.apparentLongitude);
-console.log("Jupiter: " + testJupiter.position.apparentLongitude);
-console.log("Saturn: " + testSaturn.position.apparentLongitude);
-console.log("Uranus: " + testUranus.position.apparentLongitude);
-console.log("Neptune: " + testNeptune.position.apparentLongitude);
-console.log("Pluto: " + testPluto.position.apparentLongitude);
-</script>
+##CONTACT
+[nico.daunt@gmail.com](mailto:nico.daunt@gmail.com)
+[PERSONAL WEBSITE](nicodaunt.com)
 
 ```
 

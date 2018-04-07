@@ -5,6 +5,7 @@ import { Chart} from '../models/chart.model';
 import { ChartService } from '../chart.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 var ephemeris = require('ephemeris-moshier');
+declare var require: any;
 
 @Component({
   selector: 'app-chart-detail',
@@ -23,21 +24,13 @@ export class ChartDetailComponent implements OnInit {
     private chartService: ChartService
   ) { }
 
-  ngOnInit() {
-
-
+  ngOnInit(){
     this.route.params.forEach((urlParameters) => {
       this.chartId = urlParameters['id'];
-
   });
-
-  this.chartService.getChartById(this.chartId).subscribe(dataLastEmittedFromObserver => {
-  this.chartToDisplay = dataLastEmittedFromObserver;
-
-  console.log(this.chartToDisplay);
-
-  this.chartToDisplay = this.chartService.getChartById(this.chartId);
-console.log(this.chartToDisplay)
-    }
+    this.chartService.getChartById(this.chartId).subscribe(dataLastEmittedFromObserver => {
+    this.chartToDisplay = dataLastEmittedFromObserver;
+    this.chartToDisplay = this.chartService.getChartById(this.chartId);
+  })
   }
 }
