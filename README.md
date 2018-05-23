@@ -187,7 +187,7 @@ Congratulations you are now the proud owner of a clean new astrology database! Y
 ## Contact
 questions/comments/concerns
 * [nico.daunt@gmail.com](mailto:nico.daunt@gmail.com)
-* [PERSONAL WEBSITE](nicodaunt.com)
+* [PERSONAL WEBSITE](http://www.nicodaunt.com)
 
 
 
